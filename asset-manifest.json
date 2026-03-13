@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Florence/static/css/main.08ea76b1.css",
-    "main.js": "/Florence/static/js/main.f0560e3d.js",
+    "main.css": "/Florence/static/css/main.111bc0d6.css",
+    "main.js": "/Florence/static/js/main.f651d0a0.js",
     "static/js/453.635f5f07.chunk.js": "/Florence/static/js/453.635f5f07.chunk.js",
     "static/media/Me.jpg": "/Florence/static/media/Me.b86ce64a41d6d0929594.jpg",
     "static/media/Ecommerce.PNG": "/Florence/static/media/Ecommerce.eb5581ee8d80391fbaba.PNG",
@@ -9,12 +9,12 @@
     "static/media/BusinessLandingPage.PNG": "/Florence/static/media/BusinessLandingPage.323a975b087a422878c4.PNG",
     "static/media/HeroImage.png": "/Florence/static/media/HeroImage.31afcf1fb3676dbb3278.png",
     "index.html": "/Florence/index.html",
-    "main.08ea76b1.css.map": "/Florence/static/css/main.08ea76b1.css.map",
-    "main.f0560e3d.js.map": "/Florence/static/js/main.f0560e3d.js.map",
+    "main.111bc0d6.css.map": "/Florence/static/css/main.111bc0d6.css.map",
+    "main.f651d0a0.js.map": "/Florence/static/js/main.f651d0a0.js.map",
     "453.635f5f07.chunk.js.map": "/Florence/static/js/453.635f5f07.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.08ea76b1.css",
-    "static/js/main.f0560e3d.js"
+    "static/css/main.111bc0d6.css",
+    "static/js/main.f651d0a0.js"
   ]
 }
