@@ -39,7 +39,7 @@ const Footer = () => {
 
         <div className="grid gap-10 md:grid-cols-3 items-center">
 
-          {/* BRAND */}
+      
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}

@@ -83,7 +83,7 @@ const About = () => {
 
             <div className="relative">
 
-              {/* glow background */}
+        
 
               <div className="absolute -inset-4 bg-blue-500/20 blur-2xl rounded-2xl"></div>
 
@@ -165,8 +165,7 @@ const About = () => {
 
         </div>
 
-
-        {/* HIGHLIGHT CARDS */}
+ 
 
         <motion.div
           variants={container}

@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
-import { FiMoon, FiSun } from "react-icons/fi"
+import { FiMoon, FiSun, FiMenu, FiX} from "react-icons/fi"
 import { Link } from "react-router-dom";
+ 
 
 
 const Navbar = () => {
+
+  const [menuOpen, setMenuOpen] = useState(false)
 
   const [darkMode, setDarkMode] = useState(
     localStorage.getItem("theme") === "dark"
@@ -56,6 +59,7 @@ const Navbar = () => {
     </li>
   ))}
 </ul>
+<div className="flex items-center gap-3">
         <motion.button
           whileTap={{ scale: 0.85 }}
           onClick={() => setDarkMode(!darkMode)}
@@ -63,8 +67,37 @@ const Navbar = () => {
         >
           {darkMode ? <FiSun /> : <FiMoon />}
         </motion.button>
+        <button
+    onClick={() => setMenuOpen(!menuOpen)}
+    className="md:hidden text-2xl text-gray-800 dark:text-white"
+  >
+    {menuOpen ? <FiX /> : <FiMenu />}
+  </button>
+  </div>
       </div>
+      {menuOpen && (
+  <motion.div
+    initial={{ opacity: 0, y: -20 }}
+    animate={{ opacity: 1, y: 0 }}
+    className="md:hidden bg-white dark:bg-black border-t border-gray-200 dark:border-gray-800"
+  >
+    <ul className="flex flex-col items-center gap-6 py-6 text-gray-800 dark:text-gray-200 font-medium">
+      {navLinks.map((link, index) => (
+        <li key={index}>
+          <Link
+            to={link.link}
+            onClick={() => setMenuOpen(false)}
+            className="hover:text-blue-500 transition"
+          >
+            {link.name}
+          </Link>
+        </li>
+      ))}
+    </ul>
+  </motion.div>
+)}
     </motion.nav>
+    
   )
 }
 export default Navbar
