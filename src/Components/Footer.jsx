@@ -1,33 +1,32 @@
 import { motion } from "framer-motion"
 import { FaTiktok, FaWhatsapp, FaFacebookF, FaInstagram } from "react-icons/fa"
+import { Link } from "react-router-dom"
 
 const Footer = () => {
 
   const socialLinks = [
     {
       icon: <FaTiktok />,
-      link: "#"
+      link: "https://www.tiktok.com/@Florence_Dev"
     },
     {
       icon: <FaWhatsapp />,
-      link: "#"
+      link: "https://wa.me/2347047421106?text=Hello%20Florence!"
     },
     {
       icon: <FaFacebookF />,
-      link: "#"
+      link: "https://www.facebook.com/florence.terigbade.5"
     },
     {
       icon: <FaInstagram />,
-      link: "#"
+      link: "https://www.instagram.com/florence_terigbade/"
     }
   ]
 
   const navLinks = [
-    { name: "Home", link: "#home" },
-    { name: "About", link: "#about" },
-    { name: "Services", link: "#services" },
-    { name: "Projects", link: "#projects" },
-    { name: "Contact", link: "#contact" }
+    { name: "Home", link: "/" },
+    { name: "Projects", link: "/projects" },
+    { name: "Contact", link: "/contact" }
   ]
 
   return (
@@ -69,22 +68,25 @@ const Footer = () => {
             className="flex flex-wrap gap-6 justify-start md:justify-center text-gray-700 dark:text-gray-300"
           >
 
-            {navLinks.map((link, index) => (
-              <li key={index}>
-                <a
-                  href={link.link}
-                  className="relative group text-sm"
-                >
-                  {link.name}
-
-                  {/* Hover underline */}
-
-                  <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
-
-                </a>
-              </li>
-            ))}
-
+{navLinks.map((link, index) => (
+    <li key={index} className="relative group cursor-pointer">
+      {link.link.startsWith("#") ? (
+        // Anchor links scroll on the same page
+        <a href={link.link}>
+          {link.name}
+          <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+      ) : (
+        // React Router links navigate pages
+        <Link to={link.link}
+        >
+          {link.name}
+          
+          <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
+        </Link>
+      )}
+    </li>
+  ))}
           </motion.ul>
 
 
@@ -98,15 +100,16 @@ const Footer = () => {
           >
 
             {socialLinks.map((social, index) => (
-
-              <motion.a
-                key={index}
-                href={social.link}
-                whileHover={{ y: -4 }}
-                className="w-10 h-10 flex items-center justify-center rounded-full bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 shadow hover:text-blue-500 transition"
-              >
-                {social.icon}
-              </motion.a>
+  <motion.a
+  key={index}                  
+  href={social.link}            
+  target="_blank"              
+  rel="noopener noreferrer"        
+  whileHover={{ y: -4 }}          
+  className="w-10 h-10 flex items-center justify-center rounded-full bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 shadow hover:text-blue-700 transition"
+>
+  {social.icon}
+</motion.a>
 
             ))}
 

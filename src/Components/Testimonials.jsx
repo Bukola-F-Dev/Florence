@@ -4,18 +4,16 @@ const Testimonials = () => {
 
   const testimonials = [
     {
-      name: "Sarah Johnson",
-      role: "Product Manager",
-      company: "TechCorp",
-      image: "https://i.pravatar.cc/150?img=32",
+      name: "Ahmed Olayinka",
+      role: "Website Developer",
+      company: "Fixit",
       feedback:
         "Working with Florence was an amazing experience. The application delivered exceeded expectations with clean code, fast performance, and a beautiful UI."
     },
     {
-      name: "David Lee",
+      name: "Nadri",
       role: "Startup Founder",
-      company: "InnovateX",
-      image: "https://i.pravatar.cc/150?img=12",
+      company: "AfriClick",
       feedback:
         "Florence built our platform from the ground up. The full-stack expertise and attention to detail helped our startup launch successfully."
     },
@@ -85,12 +83,6 @@ const Testimonials = () => {
               {/* CLIENT IMAGE */}
 
               <div className="flex items-center gap-4 mb-4">
-
-                <img
-                  src={testimonial.image}
-                  alt={testimonial.name}
-                  className="w-14 h-14 rounded-full object-cover"
-                />
 
                 <div>
                   <h4 className="font-semibold text-gray-900 dark:text-white">

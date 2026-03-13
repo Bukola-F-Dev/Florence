@@ -40,9 +40,16 @@ export default function Contact() {
       );
       setSuccess("Message sent successfully!");
       setFormData({ name: "", email: "", title: "", message: "" });
+      setTimeout(() => {
+        setSuccess("");
+      }, 60000);
+
     } catch (err) {
       setSuccess("Failed to send message. Try again later.");
       console.error(err);
+      setTimeout(() => {
+        setSuccess("");
+      }, 60000);
     } finally {
       setLoading(false);
     }
@@ -72,7 +79,7 @@ export default function Contact() {
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-       className="relative max-w-3xl mx-auto p-10 bg-white dark:bg-slate-900/60 backdrop-blur-xl border border-gray-200 dark:border-slate-700 rounded-3xl" >
+       className="mt-20 relative max-w-3xl mx-auto p-10 bg-white dark:bg-slate-900/60 backdrop-blur-xl border border-gray-200 dark:border-slate-700 rounded-3xl" >
              {/* Heading */}
              <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -117,7 +124,7 @@ export default function Contact() {
                   <FaEnvelope />
                 </div>
                 <span className="text-gray-700 dark:text-gray-300">
-                  your@email.com
+                  florenceterry@gmail.com
                 </span>
               </div>
 
@@ -126,7 +133,7 @@ export default function Contact() {
                   <FaPhoneAlt />
                 </div>
                 <span className="text-gray-700 dark:text-gray-300">
-                  +234 XXX XXX XXXX
+                  +234 704 742 1106
                 </span>
               </div>
 
@@ -141,22 +148,6 @@ export default function Contact() {
 
             </div>
 
-            {/* Social Links */}
-            <div className="flex gap-6 text-2xl mt-6">
-              <a
-                href="#"
-                className="text-gray-700 dark:text-gray-300 hover:text-blue-500 transition"
-              >
-                <FaGithub />
-              </a>
-
-              <a
-                href="#"
-                className="text-gray-700 dark:text-gray-300 hover:text-blue-500 transition"
-              >
-                <FaLinkedin />
-              </a>
-            </div>
 
           </motion.div>
 
@@ -189,8 +180,6 @@ export default function Contact() {
   required
   className="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-transparent text-gray-800 dark:text-white focus:outline-none focus:border-blue-500"
                    />
-
-{/* SUBJECT FIELD (matches {{title}}) */}
 <input
   type="text"
   name="title"

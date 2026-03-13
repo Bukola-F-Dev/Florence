@@ -27,9 +27,9 @@ const Navbar = () => {
       initial={{ y: -80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6 }}
-      className="fixed w-full z-50 backdrop-blur-md bg-white/70 dark:bg-black/60 border-b border-gray-200 dark:border-gray-800"
+      className=" w-full fixed z-50 backdrop-blur-md bg-white/70 dark:bg-black/60 border-b border-gray-200 dark:border-gray-800"
     >
-      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div className="max-w-7xl mx-auto px-6 py-4 right-0 w-[90%] flex justify-between items-start">
         <motion.h1
           whileHover={{ scale: 1.05 }}
           className="text-xl font-semibold tracking-wide text-gray-900 dark:text-white cursor-pointer"

@@ -1,63 +1,37 @@
 import { motion } from "framer-motion"
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa"
+import { FaExternalLinkAlt } from "react-icons/fa"
+import LandingPage from "../Components/Assets/BusinessLandingPage.PNG"
+import PhoneTechLandingPage from "../Components/Assets/PhoneTech.PNG"
+import Ecommerce from "../Components/Assets/Ecommerce.PNG"
 
 const MyWork = () => {
 
   const projects = [
     {
       title: "E-Commerce Website",
-      image: "https://via.placeholder.com/500",
+      image: Ecommerce,
       description:
         "A full stack ecommerce platform with authentication, cart system and payment integration.",
       tech: ["React", "Node.js", "MongoDB"],
-      github: "#",
-      live: "#"
+      live: "https://bukola-f-dev.github.io/MyFirst-React-Website/"
     },
+   
     {
-      title: "Portfolio Website",
-      image: "https://via.placeholder.com/500",
+      title: "Business Landing Page",
+      image: PhoneTechLandingPage,
       description:
-        "Modern responsive developer portfolio with animations and dark/light mode support.",
-      tech: ["React", "TailwindCSS", "Framer Motion"],
-      github: "#",
-      live: "#"
-    },
-    {
-      title: "Task Management App",
-      image: "https://via.placeholder.com/500",
-      description:
-        "A productivity application allowing users to create, track and manage daily tasks.",
+        "A sleek and modern landing page designed to showcase business services and attract potential clients.",
       tech: ["React", "Firebase", "Tailwind"],
-      github: "#",
-      live: "#"
+      live: "https://landing-page-chi-nine-37.vercel.app/"
     },
     {
-      title: "Restaurant Website",
-      image: "https://via.placeholder.com/500",
+      title: "Booking Website",
+      image: LandingPage,
       description:
-        "A responsive restaurant website featuring menu pages and booking system.",
-      tech: ["HTML", "CSS", "JavaScript"],
-      github: "#",
-      live: "#"
+        "A fully responsive booking website featuring a seamless booking system designed to attract potential clients.",
+      tech: ["React", "Tailwind", "JavaScript"],
+      live: "https://afri-click.vercel.app/"
     },
-    {
-      title: "Blog Platform",
-      image: "https://via.placeholder.com/500",
-      description:
-        "Full stack blogging platform with authentication, comments and post management.",
-      tech: ["React", "Express", "MongoDB"],
-      github: "#",
-      live: "#"
-    },
-    {
-      title: "Weather App",
-      image: "https://via.placeholder.com/500",
-      description:
-        "Weather forecast application using API data with a clean modern UI.",
-      tech: ["JavaScript", "API", "CSS"],
-      github: "#",
-      live: "#"
-    }
   ]
 
   const container = {
@@ -136,14 +110,9 @@ const MyWork = () => {
                 <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex items-center justify-center gap-6 transition">
 
                   <a
-                    href={project.github}
-                    className="text-white text-2xl hover:text-blue-400"
-                  >
-                    <FaGithub />
-                  </a>
-
-                  <a
                     href={project.live}
+                    target="_blank"          
+      rel="noopener noreferrer" 
                     className="text-white text-2xl hover:text-blue-400"
                   >
                     <FaExternalLinkAlt />

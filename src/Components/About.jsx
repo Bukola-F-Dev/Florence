@@ -1,5 +1,6 @@
 import { motion } from "framer-motion"
 import { FaCode, FaServer, FaDatabase, FaMobileAlt } from "react-icons/fa"
+import HeroImage from "../Components/Assets/Me.jpg"
 
 const About = () => {
 
@@ -20,25 +21,25 @@ const About = () => {
     {
       icon: <FaCode />,
       title: "Frontend Development",
-      text: "Building responsive and interactive user interfaces using modern frameworks and tools."
+      text: "I create interfaces that are not just functional but enjoyable to use."
     },
     {
       icon: <FaServer />,
       title: "Backend Development",
-      text: "Designing secure APIs and server-side logic for scalable web applications."
+      text: "I build backend systems that are reliable and easy to maintain."
     },
     {
       icon: <FaDatabase />,
       title: "Database Management",
-      text: "Working with databases to structure and manage application data efficiently."
+      text: "I organize data to make applications faster and smarter."
     },
     {
       icon: <FaMobileAlt />,
       title: "Responsive Design",
-      text: "Creating websites that perform seamlessly across desktops, tablets and mobile devices."
+      text: "I ensure every project works beautifully on any device."
     }
-  ]
-
+  ];
+  
   return (
 
     <section
@@ -87,9 +88,9 @@ const About = () => {
               <div className="absolute -inset-4 bg-blue-500/20 blur-2xl rounded-2xl"></div>
 
               <img
-                src="https://via.placeholder.com/400"
+                src={HeroImage}
                 alt="Developer"
-                className="relative w-72 md:w-96 rounded-2xl shadow-lg"
+                className="relative w-72 md:w-72 rounded-2xl border-2 border-blue-500"
               />
 
             </div>
